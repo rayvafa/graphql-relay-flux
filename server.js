@@ -18,21 +18,8 @@ MongoClient.connect('mongodb://admin:admin@ds061385.mongolab.com:61385/rgrjs', (
 	db = database;
 
 	app.use('/graphql', GraphQLHTTP({
-		schema: schema(db),
-		graphiql: true
+		schema: schema(db)
 	}));
 
 	app.listen(3000, () => console.log('Listening on port 3000...'));
-});
-
-app.get("/data/links", (req, res) => {
-	db.collection("links").find({}).toArray((err, links) => {
-		if(err) {
-			console.log(err);
-			throw err;
-		}
-
-		console.log(links);
-		res.json(links);
-	});
 });

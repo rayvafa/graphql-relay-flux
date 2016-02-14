@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/rayvafa/graphql-relay-flux/issues"
   },
-  "homepage": "https://github.com/rayvafa/graphql-relay-flux#readme"
+  "homepage": "https://github.com/rayvafa/graphql-relay-flux#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
 }

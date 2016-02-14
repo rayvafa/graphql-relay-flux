@@ -1,5 +1,6 @@
 var React = require("react");
 import API from './API';
+import LinkStore from './stores/LinkStore.js';
 
 class Main extends React.Component {
 

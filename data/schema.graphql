@@ -5,5 +5,9 @@ type Link {
 }
 
 type Query {
+  store: store
+}
+
+type store {
   links: [Link]
 }

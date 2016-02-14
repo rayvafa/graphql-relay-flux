@@ -14,7 +14,12 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js?$/,
-				loaders: ['babel-loader']
+				loader: 'babel',
+				exclude: /node_modules/,
+				query: {
+					presets: ['react', 'es2015', 'stage-0'],
+					plugins: ['./babelRelayPlugin']
+				}
 			}
 		]
 	}

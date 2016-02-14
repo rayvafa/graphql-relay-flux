@@ -3,3 +3,5 @@
 graphql-relay-flux.iml
 
 node_modules
+
+public/bundle.js

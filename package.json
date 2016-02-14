@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rayvafa/graphql-relay-flux#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "flux": "^2.1.1",
     "mongodb": "^2.1.7",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",

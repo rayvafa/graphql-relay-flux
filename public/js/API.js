@@ -1,3 +1,4 @@
+import ServerActions from './actions/ServerActions.js';
 var xhr = require('smallxhr');
 
 let API = {
@@ -11,6 +12,7 @@ let API = {
 			}
 			console.log('status: ' + xhrResponse.status);
 			console.log(data);
+			ServerActions.receiveLinks(data);
 		}, 'GET', 'application/json', 30000);
 	}
 

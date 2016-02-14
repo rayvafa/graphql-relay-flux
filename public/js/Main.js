@@ -10,12 +10,20 @@ let _getAppState = () => {
 
 class Main extends React.Component {
 
-	constructor(props) {
-		super(props);
+	static propTypes = {
+		limit: React.PropTypes.number
+	};
 
-		this.state = _getAppState();
-		this.onChange = this.onChange.bind(this);
-	}
+	static defaultProps = {
+		limit: 3
+	};
+
+	state = _getAppState();
+
+	onChange = () => {
+		console.log('onChange');
+		this.setState(_getAppState());
+	};
 
 	componentDidMount() {
 		API.fetchLinks();
@@ -26,13 +34,8 @@ class Main extends React.Component {
 		LinkStore.removeListener("change", this.onChange);
 	}
 
-	onChange() {
-		console.log('onChange');
-		this.setState(_getAppState());
-	}
-
 	render() {
-		let content = this.state.links.map(link => {
+		let content = this.state.links.slice(0, this.props.limit).map(link => {
 			return <li key={link._id}>
 				<a href={link.url}>{link.title}</a>
 			</li>

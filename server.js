@@ -8,18 +8,12 @@ let app = express();
 
 app.use(express.static('public'));
 
-let db;
-MongoClient.connect('mongodb://admin:admin@ds061385.mongolab.com:61385/rgrjs', (err, database) => {
-	if (err) {
-		console.log(err);
-		throw err;
-	}
-
-	db = database;
+(async () => {
+	let db = await MongoClient.connect('mongodb://admin:admin@ds061385.mongolab.com:61385/rgrjs');
 
 	app.use('/graphql', GraphQLHTTP({
 		schema: schema(db)
 	}));
 
 	app.listen(3000, () => console.log('Listening on port 3000...'));
-});
+})();

@@ -1,6 +1,12 @@
 var React = require("react");
+import API from './API';
 
 class Main extends React.Component {
+
+	componentDidMount() {
+		API.fetchLinks();
+	}
+
 	render() {
 		return (
 			<div>

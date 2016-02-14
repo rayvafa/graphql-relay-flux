@@ -1,0 +1,19 @@
+{
+  "name": "graphql-relay-flux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayvafa/graphql-relay-flux.git"
+  },
+  "author": "Raymond Vafa <raymond.vafa@gmail.com> (http://rayvafa.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayvafa/graphql-relay-flux/issues"
+  },
+  "homepage": "https://github.com/rayvafa/graphql-relay-flux#readme"
+}

@@ -1,5 +1,5 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
-import Hello from './Hello.js';
+import Main from './Main.js';
 
-ReactDOM.render(<Hello />, document.getElementById('react'));
+ReactDOM.render(<Main />, document.getElementById('react'));

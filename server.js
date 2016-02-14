@@ -1,10 +1,17 @@
 import express from 'express';
+import schema from './data/schema.js';
+import GraphQLHTTP from 'express-graphql';
 
 import {MongoClient} from 'mongodb';
 
 let app = express();
 
 app.use(express.static('public'));
+
+app.use('/graphql', GraphQLHTTP({
+	schema,
+	graphiql: true
+}));
 
 let db;
 MongoClient.connect('mongodb://admin:admin@ds061385.mongolab.com:61385/rgrjs', (err, database) => {

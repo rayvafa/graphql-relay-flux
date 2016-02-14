@@ -20,7 +20,9 @@
   "dependencies": {
     "events": "^1.1.0",
     "express": "^4.13.4",
+    "express-graphql": "^0.4.9",
     "flux": "^2.1.1",
+    "graphql": "^0.4.17",
     "mongodb": "^2.1.7",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
